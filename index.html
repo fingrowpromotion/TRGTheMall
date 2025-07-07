@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+		
+		<title>Compass Starter by Ariona, Rian</title>
+
+		<!-- Loading third party fonts -->
+		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
+		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+		<!-- Loading main css file -->
+		<link rel="stylesheet" href="style.css">
+		
+		<!--[if lt IE 9]>
+		<script src="js/ie-support/html5.js"></script>
+		<script src="js/ie-support/respond.js"></script>
+		<![endif]-->
+
+	</head>
+
+
+	<body>
+		
+		<div class="site-content">
+			<header class="site-header" data-bg-image="images/banner.jpeg">
+				<div class="container">
+					<a href="#" class="branding">
+						<img src="images/logo.png" alt="Fingrow">
+						<h1 class="site-title">Fingrow Ventures</h1>
+						<small class="site-description">Live better</small>
+					</a>
+				</div>
+				<div class="banner" >
+					<div class="banner-content">
+						<div class="container">
+							<div class="cta">
+								<a href="#">
+									<!--<a href="#" class="arrow-button"><i class="fa fa-angle-right"></i></a>-->
+                                                                        <h2>Mall At Gaur City Noida Extension </h2>
+									<h4>Save up to ₹42.35 Lakh in pre-launch offers</h4>
+									
+								</a>
+							</div>
+
+							<div class="subscribe-form">
+								<!--<form action="#"> -->
+
+                                                               <form id="bookingForm" action="https://formspree.io/f/mvgrnnaj" method="POST">
+									<small class="form-subtitle">Retail Space In Noida/Ghaziabad</small>
+									<h2 class="form-title">Book Now</h2>
+									
+<!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, dicta. Molestiae voluptatem laudantium tempora nemo vitae</p> -->
+
+									<div class="control">
+										<!--<input type="text" placeholder="Your name...">-->
+                                                                     <input type="text" name="Name" id="name" placeholder="Your Name" required>
+										<i class="fa fa-user"></i>
+									</div>
+									<div class="control">
+										<!-- <input type="text" placeholder="Email address..."> -->
+                                                                 <input type="email" name="Email" id="email" placeholder="Your Email" required>
+										<i class="fa fa-envelope"></i>
+									</div>
+									<div class="control">
+										<!--<input type="text" placeholder="Phone number..."> -->
+                                                                  <input type="tel" name="Phone" id="phone" placeholder="Phone Number" required>
+										<i class="fa fa-phone"></i>
+									</div>
+									<!--<input type="submit" value="Subscribe now"> -->
+                                                                          <button type="submit">Submit Details</button>
+								</form>
+<script>
+  const form = document.getElementById("bookingForm");
+
+  form.addEventListener("submit", function(e) {
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+
+    // Name validation: at least 2 characters
+    if (name.length < 2) {
+      alert("Please enter a valid name (at least 2 characters).");
+      e.preventDefault();
+      return;
+    }
+
+    // Email validation with regex
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,6}$/i;
+    if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address.");
+      e.preventDefault();
+      return;
+    }
+
+    // Phone validation: 10 digits only (Indian number format)
+    const phonePattern = /^[6-9]\d{9}$/;
+    if (!phonePattern.test(phone)) {
+      alert("Please enter a valid 10-digit Indian mobile number starting with 6,7,8, or 9.");
+      e.preventDefault();
+      return;
+    }
+  });
+</script>
+
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</header> <!-- .site-header -->
+
+			<main class="main-content">
+
+
+ <div class="countdown-container">
+    <div class="countdown" id="countdown">Loading...</div>
+    <div class="label">Pre-Launch Price*: ₹23,000/sq. ft.</div>
+    <div class="label">Launch Price (after 3 months)*: ₹25,000/sq. ft.</div>
+     <div class="label">Pre-Launch Benefit*: Save ₹2,000/sq. ft.</div>
+    
+  </div>
+
+  <script>
+    function getTargetDate() {
+      const now = new Date();
+      const target = new Date();
+      target.setDate(now.getDate() + 90); // 3 months = approx 90 days
+      return target;
+    }
+
+    const targetDate = getTargetDate();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate.getTime() - now;
+
+      if (distance < 0) {
+        document.getElementById("countdown").innerHTML = "Launched!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML =
+        `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    updateCountdown(); // Initial call
+    setInterval(updateCountdown, 1000); // Update every second
+  </script>
+
+                                  
+
+
+				<div class="fullwidth-block">
+					<div class="container">
+						<h2 class="section-title">Features & Offerings:</h2>
+						<div class="row">
+							<div class="col-md-5">
+								<ul class="arrow-list">
+									<li>Double-height retail shops</li>
+									<li>Food court, hypermarket, F&B outlets</li>
+									<li>Multiplex & entertainment zone</li>
+									<li>Premium gym space</li>
+									<li>Anchor brands shown in visuals: Gucci, CK, Chanel, Zara, Hermes, D&G, etc.</li>
+									<li>IGBC-certified green building</li>
+                                                                        <li>Multilevel parking, fire safety, CCTV, high-speed lifts</li>
+								</ul>
+							</div>
+							<div class="col-md-7">
+								<div class="feature-slider">
+									<ul class="slides">
+										<li>
+											<figure>
+												<img src="images/feature-1.png" alt="Feature 1">
+											
+											</figure>
+										</li>
+								              
+									
+									</ul>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="fullwidth-block" data-bg-color="#f0f0f0">
+					<div class="container">
+												
+						<div class="post-list">
+							<article class="post">
+								<figure class="feature-image" data-bg-image="images/figure-1.jpeg"></figure>
+								<div class="post-detail">
+									<h2 class="entry-title">Perfectly Positioned for Profits</h2>
+
+                                                                        <br>
+								<ul class="arrow-list">
+									<li>Just minutes away from Gaur City & Crossing Republik</li>
+									<li>Surrounded by high-density residential zones ensuring high footfall</li>
+									<li>Easy connectivity to NH-24, Noida Extension, and Delhi NCR</li>
+									
+                                                                       								</ul>
+							</br>
+									
+								</div>
+							</article>
+							<article class="post">
+								<figure class="feature-image" data-bg-image="images/figure-20.jpeg"></figure>
+								<div class="post-detail">
+									<h2 class="entry-title">Perfectly Positioned for Profits</h2>
+									<br>
+								<ul class="arrow-list">
+																		                                                                        <li> Ideal for retail brands, restaurants, gyms, and entertainment outlets</li>
+									<li>Ample parking & wide road frontage for better accessibility</li>
+									<li> Future-ready infrastructure with high return on investment potential/li>
+                                                                       								</ul>
+							</br>
+								</div>
+							</article>
+							<article class="post">
+								<figure class="feature-image">
+									<iframe width="854" height="510" src="images/trgmall.mp4" frameborder="0" allowfullscreen></iframe>
+								</figure>
+								<div class="post-detail">
+									<!--<h2 class="entry-title">Lorem porro quisquam dolorem</h2> -->
+									<p>The Mall promises to be a high-quality, green-certified commercial hub in a booming residential corridor. Key advantages include strong footfall, modern amenities, flexible shop sizes, and solid investment appeal—positioned as both a retail and business hotspot in the NCR region.</p>
+									<!--<a href="#" class="button">See more</a> -->
+								</div>
+							</article>
+						</div>
+					
+								
+					</div>	
+				</div>
+			</main>
+
+			<footer class="site-footer">
+				<div class="container">
+					<p>Copyright 2025 Fingrow Ventures. All rights reserved</p>
+					<div class="social-links">
+						<a href="https://www.facebook.com/fingrowrealestate" class="facebook"><i class="fa fa-facebook"></i></a>
+						<a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+						<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+						<a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/plugins.js"></script>
+		<script src="js/app.js"></script>
+		
+	</body>
+
+</html>
